@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="林鸢" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="线性表的定义 线性表：零个或多个数据元素的有限序列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性表">
+<meta property="og:url" content="https://lxruzx.github.io/linear-list/index.html">
+<meta property="og:site_name" content="林鸢">
+<meta property="og:description" content="线性表的定义 线性表：零个或多个数据元素的有限序列">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/4eIJJFc.png">
+<meta property="og:image" content="https://i.imgur.com/WXBZZyz.png">
+<meta property="og:image" content="https://i.imgur.com/QfleP8c.png">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/17-11-29/7750405.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511921076%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511921093%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923022%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923113%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923172%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923179%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923224%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923239%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923605%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923847%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511923962%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924072%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924082%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924169%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924214%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924221%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924230%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924236%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924240%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924246%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924253%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924269%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924282%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924300%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924893%281%29.jpg">
+<meta property="og:image" content="http://p05qxk5gj.bkt.clouddn.com/1511924964%281%29.jpg">
+<meta property="og:updated_time" content="2017-11-29T03:12:01.868Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="线性表">
+<meta name="twitter:description" content="线性表的定义 线性表：零个或多个数据元素的有限序列">
+<meta name="twitter:image" content="https://i.imgur.com/4eIJJFc.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"swoopIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://lxruzx.github.io/linear-list/"/>
+
+
+
+
+
+  <title>线性表 | 林鸢</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">林鸢</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lxruzx.github.io/linear-list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="NengYao Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林鸢">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">线性表</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-29T00:00:00+08:00">
+                2017-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法呀/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法呀~</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  5,069
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  18
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h2><blockquote>
+<p>线性表：<br>零个或多个数据元素的有限序列</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="线性表的顺序存储结构"><a href="#线性表的顺序存储结构" class="headerlink" title="线性表的顺序存储结构"></a>线性表的顺序存储结构</h2><h3 id="顺序存储结构的定义"><a href="#顺序存储结构的定义" class="headerlink" title="顺序存储结构的定义"></a>顺序存储结构的定义</h3><p>线性表的两种物理结构的第一种一一顺序存储结构。</p>
+<blockquote>
+<p>线性表的顺序存储结构，指的是用一段地址连续的存储单元依次存储线性表的数据元素。</p>
+<p><img src="https://i.imgur.com/4eIJJFc.png" alt=""></p>
+</blockquote>
+<h3 id="顺序存储方式"><a href="#顺序存储方式" class="headerlink" title="顺序存储方式"></a>顺序存储方式</h3><blockquote>
+<p>就是在内存中找了块地，通过占地的形式，把一定内存空间给占了，然后把相同数据类型的数据元素依次存放在这块空地中。</p>
+<h3 id="数据长度与线性表长度的区别"><a href="#数据长度与线性表长度的区别" class="headerlink" title="数据长度与线性表长度的区别"></a>数据长度与线性表长度的区别</h3><p>两个概念”数组的长度”和”续性表的长度”需要区分一下。<br>数组的长度是存放线性表的存储空间的长度，存储分配后这个量是一般是不变的。有个别同学可能会问，数组的大小一定不可以变吗?我怎么看到有书中谈到可以动态分配的一维数组。是的，一般高级语言，比如C、VB、 C++都可以用编程手段实现动态分配数组，不过这会带来性能上的损耗。</p>
+<p>线性表的长度是线性表中数据元素的个数，随着线性表插入和删除操作的进行，这个量是变化的。<br>在任意时刻，线性表的长度应该小于等于数组的长度。</p>
+</blockquote>
+<h3 id="地址计算方法"><a href="#地址计算方法" class="headerlink" title="地址计算方法"></a>地址计算方法</h3><blockquote>
+<p>由于我们数数都是从 1 开始数的，线性表的定义也不能免俗，起始也是 1， 可 C 语言中的数组却是从 0 开始第一个下标的，于是线性表的第 i 个元素是要存储在数组下标为 i-1 的位置，即数据元素的序号和存放它的数组下标之间存在对应关系<br>(如下图所示)。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/WXBZZyz.png" alt=""></p>
+<blockquote>
+<p>用数组存储顺序表意味着要分配固定长度的数组空间，由于线位表中可以进行插 入和删除操作，因此分配的数组空间要大于等于当前线性表的长度。</p>
+<p>其实，内存中的地址，就和图书馆或电影院里的座位一样，都是有编号的。 存储器中的每个存储单元都有自己的编号，这个编号称为地址。当我们占座后，占座的第一个位置确定后，后面的位置都是可以计算的。 试想一下，我是班级成绩第五名，我后面的 10 名同学成绩名次是多少呢?当然是 6， 7 ，…、 15 ，因为 5 + 1 , 5 + 2,…, 5 + 10。由于每个数据元素，不管它是整型、实型还是字符型，它都是需要占用一定的存储单元空间的。假设占用的是c个存储单元，那么线性表中第 i+1 个数据元素的存储位置和第 i 个数据元素的存储位置满足下列关系 (LOC 表示获得存储位置的函数)。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/QfleP8c.png" alt=""></p>
+<blockquote>
+<p>通过这个公式，你可以随时算出线性表中任意位置的地址，不管它是第一个还是 最后一个，都是相同的时间。 那么我们对每个线性表位置的存入或者取出数据， 对于计算机来说都是相等的时间， 也就是一个常数，因此用我们算法中学到的时间复杂度的概念来说，它的存取时间性能为 0(1)。我们通常把具有这一特点的存储结构称为随机存取结构。</p>
+</blockquote>
+<h3 id="顺序存储结构的插入与删除"><a href="#顺序存储结构的插入与删除" class="headerlink" title="顺序存储结构的插入与删除"></a>顺序存储结构的插入与删除</h3><blockquote>
+<p>插入算法的思路; </p>
+<ul>
+<li>如果插入位置不合理，抛出异常;</li>
+<li>如果线性表长度大于等于数组长度，则抛出异常或动态增加容量;</li>
+<li>从最后一个元素开始向前遍历到第 i 个位置，分别将它们都向后移动一个位 置;</li>
+<li>将要插入元素填入位置 i 处; </li>
+<li>表长加 1。</li>
+</ul>
+<p>删除算法的思路:</p>
+<ul>
+<li>如果删除位置不合理，抛出异常i</li>
+<li>取出删除元素;</li>
+<li>从删除元素位置开始遍历到最后一个元素位置，分别将它们都向前移动一 个位置;</li>
+<li>表长减 1。</li>
+</ul>
+<p>插入与删除的时间复杂度</p>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/17-11-29/7750405.jpg" alt=""></p>
+</blockquote>
+<h3 id="线性表顺序存储口结构的优缺点"><a href="#线性表顺序存储口结构的优缺点" class="headerlink" title="线性表顺序存储口结构的优缺点"></a>线性表顺序存储口结构的优缺点</h3><p><img src="http://p05qxk5gj.bkt.clouddn.com/1511921076%281%29.jpg" alt=""></p>
+<h2 id="线性表的链式存储结构"><a href="#线性表的链式存储结构" class="headerlink" title="线性表的链式存储结构"></a>线性表的链式存储结构</h2><h3 id="顺序存储结构不足的解决办法"><a href="#顺序存储结构不足的解决办法" class="headerlink" title="顺序存储结构不足的解决办法"></a>顺序存储结构不足的解决办法</h3><blockquote>
+<p>我们反正也是要让相邻元素间留有足够余地，那干脆所有的元素都不要考虑相邻位置了，哪有空位就到哪里，而只是让每个元素知道它下一个元素的位置在哪里，这样，我们可以在第一个元素时，就知道第二个元素的位置(内存地址) , 而找到它; 在第二个元素时，再找到第三个元素的位置(内存地址)。这样所有的元素我们就都可以通过遍历而找到。</p>
+</blockquote>
+<h3 id="线性表链式存储结构定义"><a href="#线性表链式存储结构定义" class="headerlink" title="线性表链式存储结构定义"></a>线性表链式存储结构定义</h3><blockquote>
+<p>单线索，无分支的情况。<br>线性表的链式存储结构的特点是用一组任意 的存储单元存储线性表的数据元素，这组存储单 元可以是连续的，也可以是不连续的。这就意味 着，这些数据元素可以存在内存未被占用的任意位置<br>(如下图所示)。</p>
+<p>在顺序结构中，每个数据元素只需要存数据元素信息就可以了。现在链式结构中，除了要存数据元素信息外， 还要存储它的后继元素的存储地址。<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511921093%281%29.jpg" alt=""></p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923022%281%29.jpg" alt=""></p>
+<blockquote>
+<p>有时，我们为了更加方便地对链表进行操作，会在单链表的第一个结点前附设一个结点，称为头结点。头结点的数据域可以不存储任何信息，谁叫它第一个呢，有这个特权。也可以存储如线性表的长度等附加信息，头结点的指针域存储指向第一个结点的指针，如下图所示</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923113%281%29.jpg" alt=""></p>
+<h3 id="头指针与头结点的异同"><a href="#头指针与头结点的异同" class="headerlink" title="头指针与头结点的异同"></a>头指针与头结点的异同</h3><p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923172%281%29.jpg" alt=""></p>
+<h3 id="线性表链式存储结构代码描述"><a href="#线性表链式存储结构代码描述" class="headerlink" title="线性表链式存储结构代码描述"></a>线性表链式存储结构代码描述</h3><p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923179%281%29.jpg" alt=""></p>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923224%281%29.jpg" alt=""></p>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923239%281%29.jpg" alt=""></p>
+<h2 id="单链表的读取"><a href="#单链表的读取" class="headerlink" title="单链表的读取"></a>单链表的读取</h2><p>获得链表第i个数据的算法思路：</p>
+<ol>
+<li>声明一个结点p指向链表第一个结点，初始化j从1开始；</li>
+<li>当j&lt;i时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1；</li>
+<li>若到链表末尾p为空，则说明第i个元素不存在；</li>
+</ol>
+<blockquote>
+<p>说白了，就是从头开始找，直到第 i 个元素为止。由于这个算法的时间复杂度取 决于 i 的位置，当 i=l 肘，则不幡遍历，第一个就取出数据了，而当 i=n 时则遍历 n-1 次才可以。 因此最坏情况的时间复杂度是 O(n)。</p>
+<p>由于单链袤的结构中没有定义表长，所以不能事先知道要循环多少次，因此也就 不方便使用 for 来控制循环。其主要核心思想就是 <strong>“工作指针后移”</strong>，这其实也是很多 算法的常用技术。</p>
+</blockquote>
+<h2 id="单链表的插入与删除"><a href="#单链表的插入与删除" class="headerlink" title="单链表的插入与删除"></a>单链表的插入与删除</h2><h3 id="单链表的插入"><a href="#单链表的插入" class="headerlink" title="单链表的插入"></a>单链表的插入</h3><p><img src="http://p05qxk5gj.bkt.clouddn.com/1511923605%281%29.jpg" alt=""><br><img src="http://p05qxk5gj.bkt.clouddn.com/1511923847%281%29.jpg" alt=""><br><img src="http://p05qxk5gj.bkt.clouddn.com/1511923962%281%29.jpg" alt=""></p>
+<blockquote>
+<p>单链表第i个数据插入结点的算法思路：</p>
+<ol>
+<li>声明一结点p指向链表第一个结点，初始化j从1开始；</li>
+<li>当j&lt;1时，就遍历链表，让p的指针向后移动，不断指向下一个结点，j累加1；</li>
+<li>若到链表末尾p为空，则说明第i个元素不存在；</li>
+<li>否则查询成功，在系统中生成一个空结点s；</li>
+<li>将数据元素 e 赋值给 s-&gt;data ;</li>
+<li>单链表的插入标准语旬 s-&gt;next=p-&gt;next ；p-&gt;next=s; </li>
+<li>返回成功。</li>
+</ol>
+</blockquote>
+<h3 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h3><p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924072%281%29.jpg" alt=""><br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924082%281%29.jpg" alt=""></p>
+<blockquote>
+<p>单链表第 i 个数据删除结点的算法思路:</p>
+<ol>
+<li>声明一结点 p 指向链表第一个结点 ， 初始化 j 从 1 开始j</li>
+<li>当j&lt;1时， 就遍历链表，让 p 的指针向后移动，不断指向下一个结点 ，j累加1；</li>
+<li>若链表末尾p为空，则说明第i个元素不存在；</li>
+<li>否则查找成功，将欲删除的结点p-&gt;next赋值给q；</li>
+<li>单链表的删除标准p-&gt;next=q-&gt;next;</li>
+<li>将q结点中的数据赋值给e,作为返回；</li>
+<li>释放q结点；</li>
+</ol>
+<p>分析一下刚才我们讲解的单链表插入和删除算法，我们发现，官们其实都是由两部分组成;第一部分就是遍历查找第 i 个元素；第二部分就是插入和删除元素。<br>从整个算法来说，我们很容易推导出：它们的时间复杂度都是 O(n)。如果在我们不知道第 i 个元素的指针位置，单链表数据结构在插入和删除操作上，与线性表的顺序存储结构是没有太大优势的。但如果，我们希望从第 i 个位置，插入 10 个元素，对于顺序存储结构意味着，每一次插入都需要移动 n一i 个元素，每次都是 O(n)。而单链表，我们只需要在第一次时，找到第 i 个位置的指针，此时为 O(n)，接下来只是简单地通过赋值移动指针而已，时间复杂度都是 0(1)。显然，对于插入或删除数据越频繁的操作，单链表的效率优势就越是明显。</p>
+</blockquote>
+<h3 id="单链表的整表创建"><a href="#单链表的整表创建" class="headerlink" title="单链表的整表创建"></a>单链表的整表创建</h3><blockquote>
+<p>回顾一下， 顺序存储结构的创建，其实就是一个数组的初始化，即声明一个类型和大小的数组并赋值的过程。而单链表和顺序存储结构就不一样，它不像顺序存储结构这么集中，它可以很散，是一种动态结构。对于每个链表来说，它所占用空间的大小和位置是不需要预先分配划定的，可以根据系统的情况和实际的需求即时生成。<br>所以创建单链表的过程就是一个动态生成链表的过程。即从”空表”的初始状态起，依次建立各元素结点，并逐个插入链衰。</p>
+<p>单链表整表创建的算法思路:</p>
+<ol>
+<li>声明一结点 p 和计数器变量 i;</li>
+<li>初始化一空链表 L;</li>
+<li>让 L 的头结点的指针指向 NULL，即建立一个带头结点的单链表；</li>
+<li>循环:</li>
+</ol>
+<ul>
+<li>生成一新结点赋值给 p;</li>
+<li>随机生成一数字赋值给 p 的数据域 p-&gt;data;</li>
+<li>将 p 插入到头结点与前一新结点之间。</li>
+</ul>
+</blockquote>
+<p>头插法：就是始终让新结点在第一的位置。<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924169%281%29.jpg" alt=""></p>
+<p>尾插法：我们把每次新结点都插在终端结点的后面。</p>
+<h3 id="单链表的整表删除"><a href="#单链表的整表删除" class="headerlink" title="单链表的整表删除"></a>单链表的整表删除</h3><blockquote>
+<p>单链表整表删除的算法思路如下:</p>
+<ol>
+<li>声明一结点 p和 q;</li>
+<li>将第一个结点赋值给 p;</li>
+<li>循环:</li>
+</ol>
+<ul>
+<li>将下一结点赋值给 q; </li>
+<li>释放 p; </li>
+<li>将 q 赋值给 p。</li>
+</ul>
+</blockquote>
+<h3 id="单链表结构与顺序存储结构优缺点"><a href="#单链表结构与顺序存储结构优缺点" class="headerlink" title="单链表结构与顺序存储结构优缺点"></a>单链表结构与顺序存储结构优缺点</h3><p>简单地对单链表结构和顺序存储结构做对比：</p>
+<ol>
+<li>存储分配方式</li>
+</ol>
+<ul>
+<li>顺序存储结构用一段连续的存储单元依次存储线性表的数据元素</li>
+<li>单链表采用链式存储结构，用一组任意的存储单元存放线性表的元素</li>
+</ul>
+<ol>
+<li>时间性能</li>
+</ol>
+<ul>
+<li>查找<pre><code>- 顺序存储结构O(1)
+- 单链表O(n)
+</code></pre></li>
+<li>插入和删除<pre><code>- 顺序存储结构需要平均移动表长一半的元素，时间为O(n)
+- 单链表在线出某位置的指针后，插入和删除时间仅为O(1)
+</code></pre></li>
+</ul>
+<ol>
+<li>空间性能</li>
+</ol>
+<ul>
+<li>顺序存储结构需要预分配存储空间，分大了，浪费，分小了易发生上溢</li>
+<li>单链表不需要分配存储空间，只要有就可以分配，元素个数也不受限制</li>
+</ul>
+<p>通过上面的对比，我们可以得出一些经验性的结论：</p>
+<ul>
+<li>若线性表需要频繁查找，很少进行插入和删除操作时，宜采用顺序存储结构。若需要频繁插入和删除时，宜采用单链表结构。</li>
+<li>当线性表中的元素个数变化较大或者根本不知道有多大时，最好用单链表结构，这样可以不需要考虑存储空间大小的问题。而如果事先知道线性表的大致长度，比如一年十二个月，一周就是七天，这种顺序存储结构效率会高很多。<blockquote>
+<p>总之，线性表的顺序存储结构和单链表结构各有其优缺点，不能简单的说哪个好，哪个不好，需要根据实际情况，来综合平衡采用哪种数据结构更能满足和达到需求和性能。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="静态链表"><a href="#静态链表" class="headerlink" title="静态链表"></a>静态链表</h2><blockquote>
+<p>首先我们让数组的元素都是由两个数据域组成， data和cur。也就是说，数组的每个下标都对应一个也data和一个cur。数据域data，用来存放数据元素， 也就是通常我们要处理的数据;而游标cur相当于单链表中的next指针，存放该元素的后继在数组中的下标。</p>
+<p>我们把这种用数组描述的链表叫做静态链表，这种描述方法还有起名叫做游标实现法。</p>
+<p>为了我们方便插入数据，我们通常会把数组建立得大一些，以便有一些空闲空间可以便于插入时不至于溢出。</p>
+<p>另外我们对数组第一个和最后一个元素作为特殊元素处理，不存数据。我们通常把未被使用的数组元素称为备用链表。而数组第一个元素，即下标为0的元素的cur就存放备用链表的第一个结点的下标；而数组的最后一个元素的cur则存放第一个有数值的元素的下标，相当于单链表中的头结点作用，当整个链表为空时，则为O²。如下图所示<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924214%281%29.jpg" alt=""></p>
+<p>假设我们已经将数据存入静态链袭，比如分别存放着”甲”、 “乙”、 “丁”、”戊”、 “己”、”庚” 等数据<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924221%281%29.jpg" alt=""></p>
+<p>此时”甲”这里就存有下一元素”乙” 的游标2，”乙”则存有下一元素”丁’的 下标 3。而”庚”是最后一个有值元素，所以它的 cur 设置为 0。而最后一个元素的 cur 则因”甲’是第一有值元素而存有它的下标为 1。 而第一个元素则因空闲空间的第一个元素下标为7 ，所以它的 cur 存有 7。</p>
+</blockquote>
+<h3 id="静态链表的插入操作"><a href="#静态链表的插入操作" class="headerlink" title="静态链表的插入操作"></a>静态链表的插入操作</h3><blockquote>
+<p>静态链表中要解决的是: 如何用静态模拟动态链表结构的存储空间的分配，需要时申请， 无用时释放。</p>
+<p>我们前面说过，在动态链表中，结点的申请和释放分别借用 malloc ()和 free()两个函数来实现。在静态链表中，操作的是数组，不存在像动态链表的结点申请和释放问题，所以我们需要自己实现这两个函数，才可以做插入和删除的操作。</p>
+<p>为了辨明数组中哪些分量未被使用，解决的办法是将所有未被使用过的及已被删除的分量用游标链成一个备用的链表， 每当进行插入时，便可以从备用链表上取得第一个结点作为待插入的新结点。<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924230%281%29.jpg" alt=""></p>
+</blockquote>
+<h3 id="静态链表的删除操作"><a href="#静态链表的删除操作" class="headerlink" title="静态链表的删除操作"></a>静态链表的删除操作</h3><h3 id="静态链表优缺点"><a href="#静态链表优缺点" class="headerlink" title="静态链表优缺点"></a>静态链表优缺点</h3><p>总结一下静态链表的优缺点</p>
+<p>优点：</p>
+<ul>
+<li>在插入和删除操作时，只需要修改游标，不需要移动元素，从而改进了顺序存储结构中的插入和删除操作需要移动大量元素的缺点。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>没有解决连续存储分配带来的表长难以确定的问题</li>
+<li>失去了顺序存储结构随机存取的特性</li>
+</ul>
+<p>总的来说，静态链表其实是为了给没有指针的高级语言设计的一种实现单链表能力的方法。尽管大家不一定会用得上，但这样的思考方式是非常巧妙的，应该理解其思想，以备不时之需。</p>
+<h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><blockquote>
+<p>将单链表中终端结点的指针端由空指针改为指向头结点，就使整个单链表形成一个环，这种头尾相接的单链表称为单循环链表，简称<strong>循环链表</strong> (circular linked list) 。</p>
+<p>为了使空链表与非空链表处理一致，我们通常设一个头结点，当然 ，这并不是说，循环链表一定要头结点，这需要注意。循环链表带有头结点的空链表如图 3-13-3 所示 :</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924236%281%29.jpg" alt=""></p>
+<blockquote>
+<p>对于非空的循环链表就如图 3-13-4 所示。</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924240%281%29.jpg" alt=""></p>
+<blockquote>
+<p>其实循环链表和单链表的主要差异就在于循环的判断条件土，原来是判断 p-&gt;next 是否为空，现在则是 p -&gt; next 不等于头结点，则循环未结束。<br>在单链表中，我们有了头结点时，我们可以用 0(1)的时间访问第一个结点，但对于要访问到最后一个结点，却需要 O(n)时间，因为我们需要将单链表全部扫描一遍。<br>有没有可能用 0(1)的时间由链表指针访问到最后一个结点呢?当然可以。<br>不过我们需要改造一下这个循环链表，不用头指针，而是用指向终端结点的尾指针来表示循环链表(如图 3.13.5 所示) ，此时查找开始结点和终端结点都很方便了。<br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924246%281%29.jpg" alt=""></p>
+<p>从上图中可以看到，终端结点用尾指针 rear 指示，则查找终端结点是 0(1) ，而开始结点，其实就是 rear-&gt;next-&gt;next，其时间复杂也为 0(1)。</p>
+<p>举个程序的例子，要将两个循环链袭合并成一个表时，有了尾指针就非常简单了。 比如下面的这两个循环链衰，它们的尾指针分别是 rearA 和 rearB，如图 3-13-6 所示。</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924253%281%29.jpg" alt=""><br><img src="http://p05qxk5gj.bkt.clouddn.com/1511924269%281%29.jpg" alt=""></p>
+<h3 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h3><blockquote>
+<p>双向链表 (也uble linked List) <strong>是在单链表的每个结点中，再设置一个指向其前驱结点的指针域。</strong>所以在双向链表中的结点都有两个指针域， 一个指向直接后继，另一个指向直接前驱。</p>
+<p>既然单链表也可以有循环链衰，那么双向链表当然也可以是循环衰。<br>双向链表的循环带头结点的空链表如图3-14-3 所示。 </p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924282%281%29.jpg" alt=""></p>
+<blockquote>
+<p>由于这是双向链表，那么对于链表中的某一个结点 p，它的后继的前驱是谁?当然还是它自己。它的前驱的后继自然也是它自己，即:<br>p-&gt;next-&gt;prior = p = p-&gt;prior-&gt;next </p>
+<p>插入操作时，其实并不复杂，不过顺序很重要，千万不能写反了。<br>我们现在假设存储元素 e 的结点为:S，要实现将结点 s 插入到结点 p 和 p -&gt; next 之间需要下面几步，如图 3-14-5 所示。</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924300%281%29.jpg" alt=""></p>
+<blockquote>
+<p>关键在于它们的顺序，由于第 2 步和第 3 步都用到了 p-&gt;next。如果第 4 步先执行，则会使得p-&gt;next 提前变成了 S，使得插入的工作完不成。 所以我们不妨把上面这张图在理解的基础上记忆，顺序是先搞定 s 的前驱和后继，再搞定后结点的前驱，最 后解决前结点的后继。<br>如果插入操作理解了，那么删除操作，就比较简单了。<br>若要删除结点 p，只需要下面两步骤，如图 3-14-6 所示。</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924893%281%29.jpg" alt=""></p>
+<blockquote>
+<p>线性表的这两种结构</p>
+</blockquote>
+<p><img src="http://p05qxk5gj.bkt.clouddn.com/1511924964%281%29.jpg" alt=""></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/algorithm/" rel="next" title="算法">
+                <i class="fa fa-chevron-left"></i> 算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/HashMap/" rel="prev" title="HashMap底层实现原理">
+                HashMap底层实现原理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">NengYao Lin</p>
+              <p class="site-description motion-element" itemprop="description">沉淀</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/LxRuzx" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://weibo.com/2755447323/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank" title="weibo">
+                    
+                      <i class="fa fa-fw fa-weibo"></i>weibo</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:nengylin@foxmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的定义"><span class="nav-number">1.</span> <span class="nav-text">线性表的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的顺序存储结构"><span class="nav-number">2.</span> <span class="nav-text">线性表的顺序存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构的定义"><span class="nav-number">2.1.</span> <span class="nav-text">顺序存储结构的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储方式"><span class="nav-number">2.2.</span> <span class="nav-text">顺序存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据长度与线性表长度的区别"><span class="nav-number">2.3.</span> <span class="nav-text">数据长度与线性表长度的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#地址计算方法"><span class="nav-number">2.4.</span> <span class="nav-text">地址计算方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构的插入与删除"><span class="nav-number">2.5.</span> <span class="nav-text">顺序存储结构的插入与删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表顺序存储口结构的优缺点"><span class="nav-number">2.6.</span> <span class="nav-text">线性表顺序存储口结构的优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性表的链式存储结构"><span class="nav-number">3.</span> <span class="nav-text">线性表的链式存储结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#顺序存储结构不足的解决办法"><span class="nav-number">3.1.</span> <span class="nav-text">顺序存储结构不足的解决办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表链式存储结构定义"><span class="nav-number">3.2.</span> <span class="nav-text">线性表链式存储结构定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#头指针与头结点的异同"><span class="nav-number">3.3.</span> <span class="nav-text">头指针与头结点的异同</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线性表链式存储结构代码描述"><span class="nav-number">3.4.</span> <span class="nav-text">线性表链式存储结构代码描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单链表的读取"><span class="nav-number">4.</span> <span class="nav-text">单链表的读取</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单链表的插入与删除"><span class="nav-number">5.</span> <span class="nav-text">单链表的插入与删除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表的插入"><span class="nav-number">5.1.</span> <span class="nav-text">单链表的插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表的删除"><span class="nav-number">5.2.</span> <span class="nav-text">单链表的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表的整表创建"><span class="nav-number">5.3.</span> <span class="nav-text">单链表的整表创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表的整表删除"><span class="nav-number">5.4.</span> <span class="nav-text">单链表的整表删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表结构与顺序存储结构优缺点"><span class="nav-number">5.5.</span> <span class="nav-text">单链表结构与顺序存储结构优缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态链表"><span class="nav-number">6.</span> <span class="nav-text">静态链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#静态链表的插入操作"><span class="nav-number">6.1.</span> <span class="nav-text">静态链表的插入操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态链表的删除操作"><span class="nav-number">6.2.</span> <span class="nav-text">静态链表的删除操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态链表优缺点"><span class="nav-number">6.3.</span> <span class="nav-text">静态链表优缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环链表"><span class="nav-number">6.4.</span> <span class="nav-text">循环链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双向链表"><span class="nav-number">6.5.</span> <span class="nav-text">双向链表</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+		<div id="music163player"> 
+			<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=515803379&auto=0&height=66">
+			</iframe>
+		</div>
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NengYao Lin</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">22.7k</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
