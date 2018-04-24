@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lxruzx.github.io/"/>
-  <updated>2018-03-27T01:45:10.799Z</updated>
+  <updated>2018-04-24T07:18:18.723Z</updated>
   <id>https://lxruzx.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Why String is immutable in Java</title>
+    <link href="https://lxruzx.github.io/Why%20String%20is%20immutable%20in%20Java/"/>
+    <id>https://lxruzx.github.io/Why String is immutable in Java/</id>
+    <published>2018-04-24T07:16:39.000Z</published>
+    <updated>2018-04-24T07:18:18.723Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="because…"><a href="#because…" class="headerlink" title="because…"></a>because…</h2><a id="more"></a><p>### </p><p>String is immutable in Java. An immutable class is simply a class whose instances cannot be modified. All information in an instance is initialized when the instance is created and the information can not be modified. There are many advantages of immutable classes. This article summarizes why String is designed to be immutable. This post illustrate the immutability concept in the perspective of memory, synchronization and data structures.</p><h2 id="Requirement-of-String-Pool"><a href="#Requirement-of-String-Pool" class="headerlink" title="Requirement of String Pool"></a>Requirement of String Pool</h2><p>String pool (String intern pool) is a special storage area in Method Area. When a string is created and if the string already exists in the pool, the reference of the existing string will be returned, instead of creating a new object.</p><p>The following code will create only one string object in the heap.</p><p> String string1 = “abcd”;<br>String string2 = “abcd”;<br>Here is how it looks:<br>java-string-pool</p><p>If a string is mutable, changing the string with one reference will lead to the wrong value for the other references.</p><h2 id="Caching-Hashcode"><a href="#Caching-Hashcode" class="headerlink" title="Caching Hashcode"></a>Caching Hashcode</h2><p>The hashcode of a string is frequently used in Java. For example, in a HashMap or HashSet. Being immutable guarantees that hashcode will always be the same so that it can be cashed without worrying about the changes.That means, there is no need to calculate hashcode every time it is used. This is more efficient.</p><p>In String class, it has the following code:</p><p>private int hash;//this is used to cache hash code.</p><h2 id="Facilitating-the-Use-of-Other-Objects"><a href="#Facilitating-the-Use-of-Other-Objects" class="headerlink" title="Facilitating the Use of Other Objects"></a>Facilitating the Use of Other Objects</h2><p>To make this concrete, consider the following program:</p><p>HashSet<string> set = new HashSet<string>();<br>set.add(new String(“a”));<br>set.add(new String(“b”));<br>set.add(new String(“c”));</string></string></p><p>for(String a: set)<br>    a.value = “a”;<br>In this example, if String is mutable, its value can be changed which would violate the design of set (set contains unduplicated elements). Of curse, the example above is just for demonstration purpose and there is no value field in a real string class.</p><h2 id="Security"><a href="#Security" class="headerlink" title="Security"></a>Security</h2><p>String is widely used as a parameter for many java classes, e.g. network connection, opening files, etc. Were String not immutable, a connection or file would be changed and this can lead to a serious security threat. The method thought it was connecting to one machine, but was not. Mutable strings could cause a security problem in Reflection too, as the parameters are strings.</p><p>Here is a code example:</p><p>boolean connect(string s){<br>    if (!isSecure(s)) {<br>throw new SecurityException();<br>}<br>    //here will cause problem, if s is changed before this by using other references.<br>    causeProblem(s);<br>}</p><h2 id="Immutable-objects-are-naturally-thread-safe"><a href="#Immutable-objects-are-naturally-thread-safe" class="headerlink" title="Immutable objects are naturally thread-safe"></a>Immutable objects are naturally thread-safe</h2><p>Because immutable objects can not be changed, they can be shared among multiple threads freely. This eliminates the requirements of doing synchronization.</p><p>In summary, String is designed to be immutable for efficiency and security reasons. This is also the reason why immutable classes are preferred in many cases in general.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;because…&quot;&gt;&lt;a href=&quot;#because…&quot; class=&quot;headerlink&quot; title=&quot;because…&quot;&gt;&lt;/a&gt;because…&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="Java基础" scheme="https://lxruzx.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Abstract and Interface</title>
