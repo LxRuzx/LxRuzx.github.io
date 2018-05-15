@@ -239,8 +239,8 @@
 <p>Maven构建项目</p>
 <ol>
 <li>File -&gt; New Project<br><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1frbtev7k7dj30mr0fb0ua.jpg" alt=""></li>
-<li>Next<br><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1frbthawt1lj30mr0fb0ua.jpg" alt=""></li>
-<li>你可以在这里选择自己需要的，在生成最终的项目时会自动加入到maven中。<br><img src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1frbtm3wk1kj30ml0ffwgh.jpg" alt=""></li>
+<li>Next<br><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1frbu9898a9j30mp0fm0tq.jpg" alt=""></li>
+<li>你可以在这里选择自己需要的，在生成最终的项目时会自动加入到maven中。红色箭头指版本更换，虽然已经更新到2.0但这里还是先用1.5<br><img src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1frbtm3wk1kj30ml0ffwgh.jpg" alt=""></li>
 <li>然后Finish生成<br><img src="https://s1.ax1x.com/2017/12/05/oZ5sU.png" alt="oZ5sU.png"></li>
 </ol>
 <p>如上图所示，Spring Boot的基础结构共三个文件:</p>
