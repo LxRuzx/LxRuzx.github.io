@@ -128,12 +128,12 @@
 
 
 
-<meta name="description" content="原文作者：清浅池塘原文地址：https://zhuanlan.zhihu.com/p/29021276">
+<meta name="description" content="HashSet的秘密">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashSet">
 <meta property="og:url" content="https://lxruzx.github.io/HashSet/index.html">
 <meta property="og:site_name" content="林鸢">
-<meta property="og:description" content="原文作者：清浅池塘原文地址：https://zhuanlan.zhihu.com/p/29021276">
+<meta property="og:description" content="HashSet的秘密">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://github.com/LxRuzx/Java-notes/blob/master/photo/HashSet1.jpg">
 <meta property="og:image" content="https://github.com/LxRuzx/Java-notes/blob/master/photo/HashSet2.jpg">
@@ -157,10 +157,10 @@
 <meta property="og:image" content="https://pic3.zhimg.com/80/v2-a24eeefe0a5d26b83d5c97bd86e7fff8_hd.jpg">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-e0de2f611aff66bbbad3a3ce243b5bc8_hd.jpg">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-9a2e3f5f91bae045da599aed754ad233_hd.jpg">
-<meta property="og:updated_time" content="2018-05-18T07:14:04.507Z">
+<meta property="og:updated_time" content="2018-05-18T07:18:15.195Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashSet">
-<meta name="twitter:description" content="原文作者：清浅池塘原文地址：https://zhuanlan.zhihu.com/p/29021276">
+<meta name="twitter:description" content="HashSet的秘密">
 <meta name="twitter:image" content="https://github.com/LxRuzx/Java-notes/blob/master/photo/HashSet1.jpg">
 
 
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,260
+                  1,264
                 </span>
               
 
@@ -468,8 +468,9 @@
       
 
       
-        <p>原文作者：清浅池塘<br>原文地址：<a href="https://zhuanlan.zhihu.com/p/29021276" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29021276</a></p>
+        <p>HashSet的秘密</p>
 <a id="more"></a>
+<p>原文作者：清浅池塘<br>原文地址：<a href="https://zhuanlan.zhihu.com/p/29021276" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29021276</a></p>
 <p>这篇文章我们先轻松一下，不讲HashMap，来说说HashSet。如果有点Java基础的童鞋，应该都知道List和Set都实现自Collection，List保证元素的添加顺序，元素可重复。而Set不保证元素的添加顺序，元素不可重复</p>
 <p><img src="https://github.com/LxRuzx/Java-notes/blob/master/photo/HashSet1.jpg" alt=""></p>
 <p>先来看看Set家族在Collection中的位置，红框里的内容就是Set的大家族了，Set接口继承自Collection。有两个很重要的实现HashSet和TreeSet。其中黄色部分前面已经说过了是要重点了解的，老规矩，上代码，大家可以先想一想以下代码的执行结果。</p>
